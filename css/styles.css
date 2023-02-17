@@ -5,13 +5,13 @@ body
 
 #title
 {
-    background-color: #ff4c68;
-    color: #fff;
+    color: #C92C6D;
+    background-color: #EA8FEA;
 }
 
 .container-fluid
 {
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 
 h1
@@ -76,6 +76,13 @@ p
 {
     width: 56%;
     transform: rotate(24deg);
+    position: absolute;
+    right:30%;
+}
+
+.position-container
+{
+    position: relative;
 }
 
 /* Features Section */
@@ -83,6 +90,8 @@ p
 #features
 {
     padding: 7% 15%;
+    background-color: #fff;
+    position: relative;
 }
 
 .feature-box
@@ -93,13 +102,13 @@ p
 
 .icon
 {
-    color: #ef8172;
+    color: #EA8FEA;
     margin-bottom: 1rem;
 }
 
 .icon:hover
 {
-    color:#ff4c68;
+    color:#C92C6D;
 }
 
 /* Testimonials */
@@ -107,8 +116,8 @@ p
 #testimonials
 {
     text-align: center;
-    background-color: #ef8172;
-    color: #fff;
+    background-color: #EA8FEA;
+    color: #C92C6D;
 }
 
 .testimonial-image
@@ -125,7 +134,7 @@ p
 
 #press
 {
-    background-color: #ef8172;
+    background-color:#EA8FEA;
     text-align: center;
     padding-bottom: 3%;
 }
@@ -147,4 +156,47 @@ p
 .pricing-column
 {
     padding: 3% 2%;
+}
+
+@media (max-width:1028px)
+{
+    #title
+    {
+        text-align: center;
+    }
+    .title-image{
+        position: static;
+        transform: rotate(0deg);
+    }
+
+}
+
+/* Call to action */
+#cta
+{
+    background-color: #E5D1FA;
+    text-align: center;
+    color:#C92C6D;
+    padding: 7% 15%;
+}
+
+.action
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    
+}
+
+/* Footer */
+#footer
+{
+    text-align: center;
+    background-color: #fff;
+    padding: 7% 15%;
+}
+
+.social-icon
+{
+    margin: 20px 10px;
 }
