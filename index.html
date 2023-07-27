@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 class="action">Find the True Love of Your Dog's Life Today.</h3>
     <button type="button" class="btn btn-dark btn-lg download-button"> <i class="fa-brands fa-apple"></i> Download</button>
     <button type="button" class="btn btn-light btn-lg download-button"> <i class="fa-brands fa-google-play"></i> Download</button>
-    <a id="buySubscriptionLink" class="btn btn-lg btn-outline-dark" onclick="buySubscription">Buy Subscription</a>
+    <a href="subscription.html" class="btn btn-lg btn-outline-dark">Buy Subscription</a>
   </div>
   </section>
   
@@ -224,29 +224,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Congratulations! You have successfully purchased the subscription.</p>
     </div>
   </section>
-
-<script>
-   function buySubscription() {
-      // Parameters to be included in the query string
-      const product = "Test Product";
-      const sku = "Test Sku";
-      const price = "1.00";
-      const orderid = "123";
-
-      // Construct the query string
-      const queryString = 'product=${encodeURIComponent(product)}&sku=${encodeURIComponent(sku)}&price=${encodeURIComponent(price)}&orderid=${encodeURIComponent(orderid)}';
-
-      // Redirect to the subscription.html page with the query string
-      window.location.href = 'subscription.html?${queryString}';
-   }
-
-  //Attaching id buySubscriptionLink to buySubscription ()
-  const buySubscriptionLink = document.getElementById("buySubscriptionLink");
-    buySubscriptionLink.addEventListener("click", function(event) {
-      event.preventDefault(); // Prevent default link behavior
-      buySubscription(); // Call the buySubscription function to handle the redirection
-    });
-  </script>
 
   <!-- Footer -->
 
