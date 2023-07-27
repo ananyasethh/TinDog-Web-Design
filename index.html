@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 class="action">Find the True Love of Your Dog's Life Today.</h3>
     <button type="button" class="btn btn-dark btn-lg download-button"> <i class="fa-brands fa-apple"></i> Download</button>
     <button type="button" class="btn btn-light btn-lg download-button"> <i class="fa-brands fa-google-play"></i> Download</button>
-    <a href="subscription.html?product=Test+Product&sku=Test+Sku&price=1.00&orderid=123" class="btn btn-lg btn-outline-dark">Buy Subscription</a>
+    <a href="#" class="btn btn-lg btn-outline-dark" onclick="buySubscription">Buy Subscription</a>
   </div>
   </section>
   
@@ -228,23 +228,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
     function buySubscription() {
 
-      // Prevent the default behavior of the anchor link (page refresh)
-        // event.preventDefault();
-        // const product = "test_Product";
-        // const sku = "Test_Sku";
-        // const price = "1.00";
-        // const orderid = "123";
-      //constructing the query with parameters using encodeURIcomponent which is JS method for proper URL making
-          // const queryString = `?product=${encodeURIComponent(product)}&sku=${encodeURIComponent(sku)}&price=${encodeURIComponent(price)}&orderid=${encodeURIComponent(orderid)}`;
-      //update the URL with querystring and scroll to desired location
-        // const targetSection = document.getElementById("subscriptionPurchased");
-        // const targetSectionId = encodeURIComponent("subscriptionPurchased");
-      //const targetURL = "subscription.html";
+function buySubscription() {
+      // Parameters to be included in the query string
+      const product = "Test Product";
+      const sku = "Test Sku";
+      const price = "1.00";
+      const orderid = "123";
 
-      //setting ne URL and scrolling      
-      window.location.href = window.location.pathname + "#" + targetSectionId + queryString;
-      // window.location.href = ${encodeURIComponent(targetURL)} + queryString;
-      targetSection.scrollIntoView({ behavior: "smooth" });
+      // Construct the query string
+      const queryString = `product=${encodeURIComponent(product)}&sku=${encodeURIComponent(sku)}&price=${encodeURIComponent(price)}&orderid=${encodeURIComponent(orderid)}`;
+
+      // Redirect to the subscription.html page with the query string
+      window.location.href = `subscription.html?${queryString}`;
     }
   </script>
   <!-- Footer -->
