@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 class="action">Find the True Love of Your Dog's Life Today.</h3>
     <button type="button" class="btn btn-dark btn-lg download-button"> <i class="fa-brands fa-apple"></i> Download</button>
     <button type="button" class="btn btn-light btn-lg download-button"> <i class="fa-brands fa-google-play"></i> Download</button>
-    <a href="" class="btn btn-lg btn-outline-dark" onclick="buySubscription()">Buy Subscription</a>
+    <a href="subscription.html" class="btn btn-lg btn-outline-dark" onclick="buySubscription()">Buy Subscription</a>
   </div>
   </section>
   
@@ -239,11 +239,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       //update the URL with querystring and scroll to desired location
         // const targetSection = document.getElementById("subscriptionPurchased");
         // const targetSectionId = encodeURIComponent("subscriptionPurchased");
-      const targetURL = "subscription.html";
+      //const targetURL = "subscription.html";
 
       //setting ne URL and scrolling      
-      // window.location.href = window.location.pathname + "#" + targetSectionId + queryString;
-      window.location.href = ${encodeURIComponent(targetURL)} + queryString;
+      window.location.href = window.location.pathname + queryString;
+      // window.location.href = ${encodeURIComponent(targetURL)} + queryString;
       // targetSection.scrollIntoView({ behavior: "smooth" });
     }
   </script>
