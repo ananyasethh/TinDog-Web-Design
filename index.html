@@ -234,7 +234,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       //constructing the query with parameters using encodeURIcomponent which is JS method for proper URL making
       const queryString = `?product=${encodeURIComponent(product)}&sku=${encodeURIComponent(sku)}&price=${encodeURIComponent(price)}&orderid=${encodeURIComponent(orderid)}`;
       //update the URL with querystring and scroll to desired location
-      window.location.href = `#${encodeURIComponent("subscriptionPurchased")}${queryString}`;
+      const targetSection = document.getElementById("subscriptionPurchased");
+      const targetSectionId = encodeURIComponent("subscriptionPurchased");
+
+      //setting ne URL and scrolling      
+      window.location.href = window.location.pathname + "#" + targetSectionId + queryString;
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   </script>
   <!-- Footer -->
