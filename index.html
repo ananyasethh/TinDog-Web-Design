@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 class="action">Find the True Love of Your Dog's Life Today.</h3>
     <button type="button" class="btn btn-dark btn-lg download-button"> <i class="fa-brands fa-apple"></i> Download</button>
     <button type="button" class="btn btn-light btn-lg download-button"> <i class="fa-brands fa-google-play"></i> Download</button>
-    <a class="btn btn-lg btn-outline-dark" onclick="buySubscription">Buy Subscription</a>
+    <a id="buySubscriptionLink" class="btn btn-lg btn-outline-dark" onclick="buySubscription">Buy Subscription</a>
   </div>
   </section>
   
@@ -239,7 +239,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // Redirect to the subscription.html page with the query string
       window.location.href = 'subscription.html?${queryString}';
    }
+
+  //Attaching id buySubscriptionLink to buySubscription ()
+  const buySubscriptionLink = document.getElementById("buySubscriptionLink");
+    buySubscriptionLink.addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      buySubscription(); // Call the buySubscription function to handle the redirection
+    });
   </script>
+
   <!-- Footer -->
 
   <footer id="footer">
