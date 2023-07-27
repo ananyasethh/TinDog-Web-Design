@@ -213,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 class="action">Find the True Love of Your Dog's Life Today.</h3>
     <button type="button" class="btn btn-dark btn-lg download-button"> <i class="fa-brands fa-apple"></i> Download</button>
     <button type="button" class="btn btn-light btn-lg download-button"> <i class="fa-brands fa-google-play"></i> Download</button>
-    <a href="" class="btn btn-lg btn-outline-dark" onclick="buySubscription">Buy Subscription</a>
+    <a class="btn btn-lg btn-outline-dark" onclick="buySubscription">Buy Subscription</a>
   </div>
   </section>
   
@@ -234,10 +234,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const orderid = "123";
 
       // Construct the query string
-      const queryString = `product=${encodeURIComponent(product)}&sku=${encodeURIComponent(sku)}&price=${encodeURIComponent(price)}&orderid=${encodeURIComponent(orderid)}`;
+      const queryString = 'product=${encodeURIComponent(product)}&sku=${encodeURIComponent(sku)}&price=${encodeURIComponent(price)}&orderid=${encodeURIComponent(orderid)}';
 
       // Redirect to the subscription.html page with the query string
-      window.location.href = `subscription.html?${queryString}`;
+      window.location.href = 'subscription.html?${queryString}';
    }
   </script>
   <!-- Footer -->
