@@ -227,6 +227,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script>
     function buySubscription() {
+
+      // Prevent the default behavior of the anchor link (page refresh)
+      event.preventDefault();
+      
       const product = "test Product";
       const sku = "Test Sku";
       const price = "1.00";
