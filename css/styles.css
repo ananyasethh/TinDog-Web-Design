@@ -200,5 +200,13 @@ p
     background-color: #EA8FEA;
 }
 
+/*Arpan's modification  */
+.buyButton
+{
+    width: 56%;
+    transform: rotate(24deg);
+    position: absolute;
+    right:30%;
+}
 
 
