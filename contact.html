@@ -45,16 +45,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <form onsubmit="handleFormSubmit(event)">
       <div class="form-group">
           <label>Name</label>
-          <input type="text" name="user" autocomplete="off" class="form-control">
+          <input type="text" name="user" autocomplete="off" class="form-control" required>
         </div>
         <div class="form-group">
           <label>Email ID</label>
-          <input type="email" name="email" autocomplete="off" class="form-control">
+          <input type="email" name="email" autocomplete="off" class="form-control" required>
         </div>
         <div class="text-center">
           <button type="submit" class="btn btn-success">Submit</button>
         </div>
       </form>
+      <!-- Display validation messages -->
+      <div id="validation-messages" class="text-center" style="display: none; color: red;">
+        Please fill out all the fields.
+      </div>
        <!-- Display success message div -->
       <div id="success-message" class="text-center" style="display: none; color: green;">
         Your form is submitted successfully!
@@ -75,14 +79,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
   </footer>
+  
+  <!-- Scripts and validation function as before... -->
   <script>
     function handleFormSubmit(event) {
       event.preventDefault(); // Prevent the form from submitting normally
 
+      const formData = new FormData(event.target);
+      const name = formData.get("user");
+      const email = formData.get("email");
+
+      // Basic form validation
+      if (name.trim() === '' || email.trim() === '') {
+        const validationMessages = document.getElementById("validation-messages");
+        validationMessages.style.display = "block";
+        return; // Don't proceed with form submission if fields are empty
+      }
+
       // Your form submission code here (e.g., sending data to a server using AJAX)
       // For this example, we'll simply log the form data to the console.
 
-      const formData = new FormData(event.target);
       for (var [key, value] of formData.entries()) {
         console.log(key + ": " + value);
       }
